@@ -25,6 +25,7 @@ services:
       - "8000:8000"
     environment:
       DATABASE_HOST: 'basicdb'
+      DJANGO_EXECUTION_ENVIRONMENT: 'DEV'
     depends_on:
       db:
         condition: service_healthy

@@ -11,6 +11,12 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_basic.settings')
+from common.code import get_env_variable
+
+DJANGO_EXECUTION_ENVIRONMENT = get_env_variable('DJANGO_EXECUTION_ENVIRONMENT')
+if DJANGO_EXECUTION_ENVIRONMENT == 'DEV':
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_basic.settings.local")
+if DJANGO_EXECUTION_ENVIRONMENT == 'PROD':
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_basic.settings.production")
 
 application = get_asgi_application()

@@ -3,10 +3,16 @@
 import os
 import sys
 
+from common.code import get_env_variable
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_basic.settings')
+    DJANGO_EXECUTION_ENVIRONMENT = get_env_variable('DJANGO_EXECUTION_ENVIRONMENT')
+    if DJANGO_EXECUTION_ENVIRONMENT == 'DEV':
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_basic.settings.local")
+    if DJANGO_EXECUTION_ENVIRONMENT == 'PROD':
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_basic.settings.production")
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
