@@ -24,7 +24,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_HOST: 'basicdb'
+      DATABASE_HOST: 'db'
       DJANGO_EXECUTION_ENVIRONMENT: 'DEV'
     depends_on:
       db:

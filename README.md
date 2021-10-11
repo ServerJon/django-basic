@@ -38,6 +38,20 @@ Si por el contrario queremos trabajar desde un entorno en local se recomienda ut
 - Se recomienda utilizar un gestor de versiones de python como por ejemplo [pyenv](https://github.com/pyenv/pyenv).
 - Crear un entorno virtual de trabajo e instalar con pip los modulos del fichero _requirements.txt_.
 
+### 4. Realizar las migraciones minimas
+
+Como primer comando a ejecutar una vez levantado todo el entorno de trabajo será crear la base de datos a trabajar. Para ello se ejecutarán el siguiente comando:
+
+    python manage.py migrate
+
+### 5. Crear un usuario super admin
+
+Una vez tengamos el entorno de trabajo levantado y el servidor en marcha debemos crear un usuario super admin para poder acceder a la zona de administración de django. Para ello ejecutaremos el siguiente comando y rellenaremos los campos que nos pidan:
+
+    python manage.py createsuperuser
+
+Si estamos trabajando con Docker debemos ejecutar el comando a través del contenedor _web_.
+
 ## Configuración a tener en cuenta
 
 1. Cuando se crea una nueva aplicación desde el docker de django se crearán los permisos como usuario root por lo que deberemos de cambiarlos para poder trabajar con esos ficheros. El comando será:
