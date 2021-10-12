@@ -74,6 +74,10 @@ Para poder trabajar de forma optima con nuestro proyecto se utilizarán los mód
 
     pre-commit install
 
+Si no quisieramos que verificara nuestro código podremos añadir al comando de _git commit_ el argumento de _--no-verify_:
+
+    git commit -m"mensaje" --no-verify
+
 ## Configuración a tener en cuenta
 
 1. Cuando se crea una nueva aplicación desde el docker de django se crearán los permisos como usuario root por lo que deberemos de cambiarlos para poder trabajar con esos ficheros. El comando será:
