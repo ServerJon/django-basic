@@ -1,5 +1,4 @@
 from .base import *
-from common.code import get_env_variable
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -12,9 +11,9 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]", "0.0.0.0"]
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "basicdb",
-        "USER": "ServerJon",
-        "PASSWORD": "serverjon",
+        "NAME": get_secret('DB_NAME'),
+        "USER": get_secret('USER_DB'),
+        "PASSWORD": get_secret('PWD_DB'),
         "HOST": get_env_variable("DATABASE_HOST"),
         "PORT": "3306",
     }
@@ -22,4 +21,4 @@ DATABASES = {
 
 # Static Django admin web files
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR.child('staticfiles')

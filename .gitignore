@@ -81,3 +81,6 @@ venv.bak/
 
 # Docker MYSQL Database #
 mysql/
+
+# Others
+secret.json

@@ -24,6 +24,20 @@ Cambiar cualquier referencia de *django_basic* por el nombre de tu proyecto. Los
 
 TODO: Crea un script para hacer esto de forma automática
 
+### 3. Crear un fichero secret.json
+
+En la raíz de nuestro proyecto debemos crear un fichero _secret.json_ y crear las variables de entorno para nuestro proyecto:
+
+    {
+        "FILENAME": "secret.json",
+        "SECRET_KEY": "django-insecure-05)jvx573+7yi3(c8_8zlpu^!=wf=4c=_kk3c+lh!6j@yv^43b",
+        "DB_NAME": "basicdb",
+        "USER_DB": "ServerJon",
+        "PWD_DB": "serverjon"
+    }
+
+Se recomienda modificar el SECRET_KEY para mayor seguridad.
+
 ### 3. Levantar el entorno de trabajo
 
 El proyecto está configurado para trabajar con los contenedores de Docker:
@@ -56,4 +70,12 @@ Si estamos trabajando con Docker debemos ejecutar el comando a través del conte
 
 1. Cuando se crea una nueva aplicación desde el docker de django se crearán los permisos como usuario root por lo que deberemos de cambiarlos para poder trabajar con esos ficheros. El comando será:
 
-    sudo chown -R $USER:$USER .
+    `sudo chown -R $USER:$USER .`
+
+2. Eliminar repositorio para enlazar con el que queramos:
+
+    `git remote remove origin`
+
+    `git remote add origin your_git_project`
+
+3. Se recomienda utilizar _[Docker secrets](https://docs.docker.com/engine/swarm/secrets/)_ para guardar información sensible como los datos de la base de datos del fichero docker-compose.
