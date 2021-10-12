@@ -3,6 +3,7 @@ import json
 
 from django.core.exceptions import ImproperlyConfigured
 
+
 def get_env_variable(var_name):
     """Get a global environment variable
 
@@ -20,7 +21,7 @@ def get_env_variable(var_name):
         return os.environ[var_name]
     except KeyError:
         error_msg = "Set the {} environment variable".format(var_name)
-        raise ImproperlyConfigured(error_msg)
+        raise ImproperlyConfigured(error_msg) from KeyError
 
 
 def get_secret(secret_name):
@@ -37,11 +38,11 @@ def get_secret(secret_name):
     """
 
     # Get the secret dict
-    with open('secret.json') as _file:
+    with open("secret.json") as _file:
         secret_data = json.loads(_file.read())
 
     try:
         return secret_data[secret_name]
-    except:
+    except BaseException:
         msg = "la variable {} no existe".format(secret_name)
-        raise ImproperlyConfigured(msg)
+        raise ImproperlyConfigured(msg) from None
