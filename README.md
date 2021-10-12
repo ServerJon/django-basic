@@ -68,6 +68,12 @@ Una vez tengamos el entorno de trabajo levantado y el servidor en marcha debemos
 
 Si estamos trabajando con Docker debemos ejecutar el comando a través del contenedor _web_.
 
+### 6. Configuración pre-commit
+
+Para poder trabajar de forma optima con nuestro proyecto se utilizarán los módulos de pre-commit y black. Para utilizarlos tan solo es necesario instalar el fichero de _requirements-dev.txt_. Una vez instalados todos los paquetes necesarios ejecutaremos el siguiente comando y estará todo listo:
+
+    pre-commit install
+
 ## Configuración a tener en cuenta
 
 1. Cuando se crea una nueva aplicación desde el docker de django se crearán los permisos como usuario root por lo que deberemos de cambiarlos para poder trabajar con esos ficheros. El comando será:
