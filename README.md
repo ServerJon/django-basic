@@ -10,6 +10,8 @@ Para utilizar este proyecto debemos de seguir los siguientes pasos.
 
     git clone git@github.com:ServerJon/django-basic.git
 
+O también puedes crear uno nuevo con la opción de `Usa esta plantilla`
+
 ### 2. Cambiar el nombre del proyecto
 
 Cambiar cualquier referencia de *django_basic* por el nombre de tu proyecto. Los ficheros a modificar son:
