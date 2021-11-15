@@ -16,13 +16,13 @@ O también puedes crear uno nuevo con la opción de `Usa esta plantilla`
 
 Cambiar cualquier referencia de *django_basic* por el nombre de tu proyecto. Los ficheros a modificar son:
 
-- [manage.py](https://github.com/ServerJon/django-basic/blob/main/manage.py)
+- manage<span></span>.py
 - Dockerfile
 - docker-compose.yml
 - Carpeta raíz django_basic
-- [asgi.py](https://github.com/ServerJon/django-basic/blob/main/django_basic/asgi.py)
+- asgi<span></span>.py
 - Carpeta settings (y cualquier fichero hijo de configuración: base, dev, prod, etc)
-- [wsgi.py](https://github.com/ServerJon/django-basic/blob/main/django_basic/wsgi.py)
+- wsgi<span></span>.py
 
 TODO: Crea un script para hacer esto de forma automática
 
