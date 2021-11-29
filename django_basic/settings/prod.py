@@ -1,4 +1,6 @@
-from .base import get_secret, get_env_variable, BASE_DIR
+from .base import *
+from .base import BASE_DIR
+from common.code import get_env_variable, get_secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
