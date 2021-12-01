@@ -14,7 +14,7 @@ O también puedes crear uno nuevo con la opción de `Usa esta plantilla`
 
 ### 2. Cambiar el nombre del proyecto
 
-Cambiar cualquier referencia de *django_basic* por el nombre de tu proyecto. Los ficheros a modificar son:
+Cambiar cualquier referencia de *django_basic* o *django-basic* por el nombre de tu proyecto. Los ficheros a modificar son:
 
 - manage<span></span>.py
 - Dockerfile
@@ -23,6 +23,8 @@ Cambiar cualquier referencia de *django_basic* por el nombre de tu proyecto. Los
 - asgi<span></span>.py
 - Carpeta settings (y cualquier fichero hijo de configuración: base, dev, prod, etc)
 - wsgi<span></span>.py
+- docker-compose<span></span>.yml
+- Dockerfile
 
 TODO: Crea un script para hacer esto de forma automática
 
