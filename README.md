@@ -54,7 +54,7 @@ Si por el contrario queremos trabajar desde un entorno en local se recomienda ut
 
 - Comprobar que se tiene instalado python en una de sus últimas versiones, el proyecto trabaja con python3.
 - Se recomienda utilizar un gestor de versiones de python como por ejemplo [pyenv](https://github.com/pyenv/pyenv).
-- Crear un entorno virtual de trabajo e instalar con pip los modulos del fichero _requirements.txt_.
+- Crear un entorno virtual de trabajo e instalar con pip los modulos del fichero _requirements.txt_ y _requirements-dev.txt_.
 - En caso de usar un entorno virtual solamente será necesario levantar el docker de la base de datos de mysql.
 - Si en la instalación nos da un error el modulo de mysqlclient debemos instalar una serie de paquetes. En el siguiente tenemnos las diferentes opciones para Ubuntu, Mac o Windows: [pip install mysqlclient error](https://stackoverflow.com/questions/35190465/virtualenvpython3-4-pip-install-mysqlclient-error)
 
